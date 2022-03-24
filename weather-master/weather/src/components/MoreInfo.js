@@ -1,5 +1,6 @@
 import Humidity from './Humidity.js'
 import Wind from './Wind.js'
+import WeeklyForecast from './WeeklyForecast.js'
 
 const MoreInfo = ({weatherData,isMetric}) => {
   return (
@@ -11,6 +12,7 @@ const MoreInfo = ({weatherData,isMetric}) => {
 
       <div className="blockInfo">
         <Wind speed={weatherData['current']['wind_speed']} direction={weatherData['current']['wind_deg']+90}/>
+        <WeeklyForecast />
       </div>
 
     </div>
